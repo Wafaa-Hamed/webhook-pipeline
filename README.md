@@ -45,9 +45,7 @@ src/
  ├── db/
  │   ├── index.ts
  │   └── schema.ts
- ├── modules/
- │   |__pipelines/
-        |__ pipelines.controller.ts
+ |
  ├── worker.ts
  ├── index.ts
 
