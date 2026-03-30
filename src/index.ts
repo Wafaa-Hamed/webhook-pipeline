@@ -67,13 +67,11 @@ app.post("/webhooks/:pipelineId", async (req, res) => {
   });
 });
 
-// ✅ Get pipelines
 app.get("/pipelines", async (req, res) => {
   const all = await db.select().from(pipelines);
   res.json(all);
 });
 
-// ✅ Job status + deliveries
 app.get("/jobs/:jobId", async (req, res) => {
   const { jobId } = req.params;
 
@@ -97,7 +95,6 @@ app.get("/jobs/:jobId", async (req, res) => {
   });
 });
 
-// GET pipeline by ID
 app.get("/pipelines/:id", async (req, res) => {
 const pipeline = await db
   .select()
@@ -149,7 +146,6 @@ app.put("/pipelines/:id", async (req, res) => {
   }
 });
 
-// DELETE pipeline
 app.delete("/pipelines/:id", async (req, res) => {
   const { id } = req.params;
 
